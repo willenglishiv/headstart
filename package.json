@@ -1,0 +1,61 @@
+{
+  "name": "node-app-starter",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npx nodemon --exec babel-node ./bin/www",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "lint": "npx eslint . -o ./__tests__/eslint.html -f html"
+  },
+  "dependencies": {
+    "babel-eslint": "^8.2.3",
+    "cookie-parser": "~1.4.3",
+    "debug": "^3.1.0",
+    "eslint-html-reporter": "^0.5.2",
+    "express": "~4.16.0",
+    "express-validator": "^5.1.2",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0",
+    "pug": "^2.0.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^22.4.3",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "jest": "^22.4.3",
+    "nodemon": "^1.17.3",
+    "regenerator-runtime": "^0.11.1",
+    "supertest": "^3.0.0"
+  },
+  "nodemonConfig": {
+    "restartable": "rs",
+    "ignore": [
+      ".git",
+      "node_modules/**/node_modules",
+      "package.json"
+    ],
+    "verbose": true,
+    "watch": [
+      "public",
+      "routes",
+      "views",
+      "app.js"
+    ],
+    "env": {
+      "NODE_ENV": "development",
+      "DEBUG": "node-app-starter:*"
+    },
+    "ext": "js,json,css,pug,www"
+  },
+  "jest": {
+    "verbose": true
+  }
+}
