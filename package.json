@@ -6,7 +6,7 @@
     "start": "npx nodemon --exec babel-node ./bin/www",
     "test": "jest",
     "test:coverage": "jest --coverage",
-    "lint": "npx eslint . -o ./__tests__/eslint.html -f html"
+    "lint": "eslint . -o ./__tests__/eslint.html -f html; exit 0"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
